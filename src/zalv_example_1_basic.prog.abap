@@ -27,6 +27,7 @@ END-OF-SELECTION.
   ).
 
   IF sy-subrc <> 0.
+
     WRITE:/ 'Error crear ALV'.
   ELSE.
     mo_alv->show_alv( ).
