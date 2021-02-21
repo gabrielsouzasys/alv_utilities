@@ -30,6 +30,7 @@ end-of-selection.
   else.
     "Opciones de layout
 
+
     "Columnas optimizadas
     mo_alv->set_optimized_cols( abap_true ).
 
