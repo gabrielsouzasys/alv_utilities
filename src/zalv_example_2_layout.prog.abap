@@ -4,30 +4,30 @@
 *& Objetivo: Ejemplos para entender como utilizar la clase ZCL_CA_ALV
 *& Descripción: Ejemplo cambiando el layout del ALV
 *&---------------------------------------------------------------------*
-REPORT zalv_example_2_layout.
+report zalv_example_2_layout.
 
-START-OF-SELECTION.
+start-of-selection.
 
-  SELECT bname, gltgv, gltgb, uflag
-         FROM usr02
-         INTO TABLE @DATA(mt_datos).
+  select bname, gltgv, gltgb, uflag
+         from usr02
+         into table @data(mt_datos).
 
-END-OF-SELECTION.
+end-of-selection.
 
-  DATA(mo_alv) = NEW zcl_ca_alv(  ).
+  data(mo_alv) = new zcl_ca_alv(  ).
 
   mo_alv->create_alv(
-    EXPORTING
+    exporting
       iv_program        = sy-repid
-    CHANGING
+    changing
       ct_data           = mt_datos
-    EXCEPTIONS
+    exceptions
       error_create_alv  = 1
-      OTHERS            = 2 ).
+      others            = 2 ).
 
-  IF sy-subrc <> 0.
-    WRITE:/ 'Error crear ALV'.
-  ELSE.
+  if sy-subrc <> 0.
+    write:/ 'Error crear ALV'.
+  else.
     "Opciones de layout
 
     "Columnas optimizadas
@@ -46,4 +46,4 @@ END-OF-SELECTION.
     mo_alv->set_selection_mode( if_salv_c_selection_mode=>multiple ).
 
     mo_alv->show_alv( ).
-  ENDIF.
+  endif.
