@@ -4,8 +4,6 @@
   <asx:values>
    <PROGDIR>
     <NAME>ZALV_EXAMPLE_3_FIELDCATALOG</NAME>
-    <STATE>A</STATE>
-    <VARCL>X</VARCL>
     <DBAPL>S</DBAPL>
     <SUBC>1</SUBC>
     <RLOAD>E</RLOAD>
