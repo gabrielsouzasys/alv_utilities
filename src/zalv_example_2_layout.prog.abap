@@ -16,14 +16,14 @@ end-of-selection.
 
   data(mo_alv) = new zcl_ca_alv(  ).
 
-  mo_alv->create_alv(
-    exporting
-      iv_program        = sy-repid
-    changing
-      ct_data           = mt_datos
-    exceptions
-      error_create_alv  = 1
-      others            = 2 ).
+  MO_ALV->CREATE_ALV(
+    EXPORTING
+      IV_PROGRAM        = SY-REPID
+    CHANGING
+      CT_DATA           = MT_DATOS
+    EXCEPTIONS
+      ERROR_CREATE_ALV  = 1
+      OTHERS            = 2 ).
 
   if sy-subrc <> 0.
     write:/ 'Error crear ALV'.
