@@ -29,6 +29,7 @@ end-of-selection.
     write:/ 'Error crear ALV'.
   else.
     "Opciones de layout
+
     "Columnas optimizadas
     mo_alv->set_optimized_cols( abap_true ).
 
